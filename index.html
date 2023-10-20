@@ -35,8 +35,8 @@
 
         <form id="description-form">
           <label for="description">Edited Description:</label>
-          <textarea id="description"></textarea>
-          <button type="submit">Update Beer</button>
+          <textarea id="description" name="description"></textarea>
+          <button type="submit" id="description-formBtn"></button>Update Beer</button>
         </form>
 
         <h3>Customer Reviews</h3>
@@ -46,8 +46,8 @@
         </ul>
         <form id="review-form">
           <label for="review">Your Review:</label>
-          <textarea id="review"></textarea>
-          <button type="submit">Add review</button>
+          <textarea id="review" name="review"></textarea>
+          <button type="submit" onclick="reviewForm()">SUBMIT</button>
         </form>
       </div>
     </main>

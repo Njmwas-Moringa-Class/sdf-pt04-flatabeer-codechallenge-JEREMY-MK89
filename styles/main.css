@@ -82,7 +82,14 @@ textarea {
   margin-bottom: 10px;
 }
 
-form button[type="submit"] {
+
+#review-list li {
+  background-color: #fff3a9;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#description-formBtn[type="submit"] {
   border: none;
   font-size: 16px;
   font-weight: 600;
@@ -93,9 +100,14 @@ form button[type="submit"] {
   cursor: pointer;
 }
 
-#review-list li {
-  background-color: #fff3a9;
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
+
+form button[type="submit"] {
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #f1a458;
+  color: #fff;
+  padding: 7px 10px;
+  cursor: pointer;
 }
