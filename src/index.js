@@ -1,10 +1,30 @@
 const BASE_URL = "http://localhost:3000";
 
-async function beerSurvey(){
-const beerResponse = await fetch('${BASE_URL}/beers');
-const beers = await beerResponse.json();
-return beerSurvey ();
+const beerSurvey = (beerId) => {
+  fetch(`${baseUrl}/beers/${beerId}`)
+    .then((response) => response.json())
+    .then((beerData) => {
+      const beerName = document.getElementById("beer-name");
+      const beerDescription = document.getElementById("beer-description");
+      const reviewList = document.getElementById("review-list");
+
+      beerName.textContent = beerData.name;
+      beerDescription.textContent = beerData.description;
+
+
+      reviewList.innerHTML = "";
+      beerData.reviews.forEach((review) => {
+        const li = document.createElement("li");
+        li.textContent = review;
+        reviewList.appendChild(li);
+
+
+    });
+
+  })
+
 };
+
 
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -53,28 +73,6 @@ function reviewForm() {
 textArea = document.getElementById("review").value;	
 document.getElementById("review-list").innerHTML = textArearea;
 }
-
-
-
-//const BASE_URL = "http://localhost:3000";
-//async function beerSurvey(){
-//const beerResponse = await fetch({'$BASE_URL'}/beers);
-//const beers = await beerResponse.json();
-
-//return beerSurvey ();
-//};
-
-  
-   //const ul = document.createElement("ul");
-
-   //for (let i = 0; i < 3; i++) {
-    //const li = nav.createElement("li");
-  // li.textContent = (i + 1).toString();
- //ul.append(li);
- /// }
-   
-   //element.append(ul);
-
 
 
 
